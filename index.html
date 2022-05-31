@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Weather Forecast </title>
+
+	<link rel = "stylesheet" href = "major.css">
+	<!-- font awesome -->
+    <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" >
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"> </script>
+
+</head>
+<body onload = "DefaultScreen()" >
+
+	<div class="Header">
+		<h1 class="tb"> WEATHER FORECASTING <br> FOR 5 - DAYS </h1>
+	</div>
+
+	<br> <br> <br>
+	<div style="margin-top: 100px;"></div>
+	<br> <br> <br>
+
+	<div class="inputWithIcon inputIconBg">
+		<input type="text" name="city" placeholder="Enter City Name" id="cityinput">
+		<i class="fa-solid fa-city"></i>
+	</div>
+
+	<br> <br>
+
+	<div align="center">
+		<button onclick="Getinfo()"> <svg> <rect> </rect> </svg> Click Here </button>
+	</div>
+
+	<br> <br>
+
+	<h3 class="txt" id="jtxt"> City Name : London </h3>
+
+	<div class="gb">
+		<div>
+			<p class="weather" id="day1"></p>
+			<img src="load.gif" class="imgClass" id="img1">
+
+			<p class="condition" id="day1con"> Loading... </p>
+            <p class="temp" id="day1temp"> Loading... </p>
+            <p class="humidty" id="day1hum"> Loading... </p>
+            <p class="windspeed" id="day1wind"> Loading... </p>
+            <p class="time" id="day1time"> Loading... </p>
+		</div>
+		<div>
+			<p class="weather" id="day2"></p>
+			<img src="load.gif" class="imgClass" id="img2">
+
+			<p class="condition" id="day2con"> Loading... </p>
+            <p class="temp" id="day2temp"> Loading... </p>
+            <p class="humidty" id="day2hum"> Loading... </p>
+            <p class="windspeed" id="day2wind"> Loading... </p>
+            <p class="time" id="day2time"> Loading... </p>
+		</div>
+		<div>
+			<p class="weather" id="day3"></p>
+			<img src="load.gif" class="imgClass" id="img3">
+
+			<p class="condition" id="day3con"> Loading... </p>
+            <p class="temp" id="day3temp"> Loading... </p>
+            <p class="humidty" id="day3hum"> Loading... </p>
+            <p class="windspeed" id="day3wind"> Loading... </p>
+            <p class="time" id="day3time"> Loading... </p>
+		</div>
+		<div>
+			<p class="weather" id="day4"></p>
+			<img src="load.gif" class="imgClass" id="img4">
+
+			<p class="condition" id="day4con"> Loading... </p>
+            <p class="temp" id="day4temp"> Loading... </p>
+            <p class="humidty" id="day4hum"> Loading... </p>
+            <p class="windspeed" id="day4wind"> Loading... </p>
+            <p class="time" id="day4time"> Loading... </p>
+		</div>
+		<div>
+			<p class="weather" id="day5"></p>
+			<img src="load.gif" class="imgClass" id="img5">
+
+			<p class="condition" id="day5con"> Loading... </p>
+            <p class="temp" id="day5temp"> Loading... </p>
+            <p class="humidty" id="day5hum"> Loading... </p>
+            <p class="windspeed" id="day5wind"> Loading... </p>
+            <p class="time" id="day5time"> Loading... </p>
+		</div>
+	</div>
+
+	<!--- Data Visualization Charts --->
+
+	<h3 class="txt1" > Data Visualization  Charts </h3> 
+
+	<br> <br>
+	
+	<div class="wchart">
+
+		<div id="chart_div" class="tchart"> </div>  &nbsp; &nbsp;
+
+		<div id="hchart_div" class="tchart"> </div>
+		
+	</div>
+
+	<br> <br>
+
+	</div align="center">
+		<div id="windchart_div" class="tchart"> </div>
+	<div>
+
+	<br>
+
+	<h2 class="tvh"> Temperature  Vs  Humidity Vs Wind Speed </h2>
+
+	<div align="center">
+		
+		<div id="linechart_material"> </div>
+
+	</div>
+
+	<div style="margin-top: 100px;"></div>
+
+	<div id = "Footer" align="center">
+	    <div> <h2 class="end"> Thank you For Visting Your Weather </h2> </div>
+	    <div> <p class="end1"> Designed And Developed By M . J . N . V . Sai </p> </div>
+	    <div id="circle"> <img src = "https://bit.ly/3qVrg6X" class="myimg"> </div>
+	</div>
+
+	<script src="majorp.js"></script>
+
+</body>
+</html>

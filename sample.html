@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Google Charts </title>
+
+   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"> </script>
+
+   <script type="text/javascript">
+     
+    google.charts.load('current', {packages: ['corechart', 'line']});
+    google.charts.setOnLoadCallback(graph);
+
+    function graph()
+    {
+
+          var data = new google.visualization.DataTable();
+          data.addColumn('number', 'X');
+          data.addColumn('number', 'Dogs');
+
+          data.addRows([
+            [0, 0],   [1, 10],  [2, 23],  [3, 17],  [4, 18],  [5, 9]
+          ]);
+
+          var options = {
+            hAxis: {
+              title: 'Time'
+            },
+            vAxis: {
+              title: 'Popularity'
+            }
+          };
+
+          var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+
+          chart.draw(data, options);
+    }
+
+   </script>
+
+</head>
+<body>
+   <div id="chart_div"></div>
+</body>
+</html>
